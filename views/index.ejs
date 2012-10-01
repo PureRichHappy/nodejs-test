@@ -1,0 +1,12 @@
+<h1><%= title %></h1>
+<form method="POST" action="/create">
+ <fieldset>
+  <p><label>text</label><input type="text" name="text"></p>
+ </fieldset>
+ <input type="submit" value="Post">
+</form>
+<ul>
+<% items.forEach(function(item){ %>
+  <li><%= item.text %></li>
+<% }) %>
+</ul>

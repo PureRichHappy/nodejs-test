@@ -11,3 +11,12 @@
 exports.index = function(req, res){
   res.render('index', { title: 'Entry List', items : items });
 };
+
+exports.form = function(req, res){
+    res.render('form', {title: 'new Entry'})
+};
+
+exports.create = function (req, res){
+    console.log(req.body.text);
+    res.redirect('/');
+};
